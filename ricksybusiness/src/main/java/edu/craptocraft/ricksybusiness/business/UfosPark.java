@@ -1,7 +1,9 @@
 package edu.craptocraft.ricksybusiness.business;
 
 import java.util.Map;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 
 public class UfosPark implements GuestDispatcher {
 
@@ -42,11 +44,19 @@ public class UfosPark implements GuestDispatcher {
             if (ovnis.getValue() == cardNumber) {
                 id = ovnis.getKey();
                 break;
-
             }
         }
         return id;
+    }
 
+    @Override
+    public String toString() {
+
+        String[] ovnis = this.flota.keySet().toArray(new String[flota.size()]);
+
+        Arrays.sort(ovnis);
+
+        return List.of(ovnis).toString();
     }
 
 }
