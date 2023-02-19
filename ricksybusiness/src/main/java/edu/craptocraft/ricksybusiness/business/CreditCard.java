@@ -16,28 +16,12 @@ public class CreditCard {
         return this.number;
     }
 
-    boolean pay(double cobro) {
-
-        if (cobro > credit) {
-            return false;
-        } else {
-            credit -= cobro;
-            return true;
-        }
-
-    }
-
     String cardOwner() {
         return this.owner;
     }
 
-    double credit() {
-        return this.credit;
-    }
-
     @Override
     public String toString() {
-        return "owner: " + this.owner + "\nnumber: " + this.number + "\ncredit: " + this.credit + " " + this.SYMBOL;
+        return "Owner: " + cardOwner() + "\nCard number: " + number();
     }
-
 }
