@@ -1,6 +1,7 @@
 package edu.craptocraft.ricksybusiness.business;
 
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -57,6 +58,14 @@ public class UfosPark implements GuestDispatcher {
         Arrays.sort(flotaOvnis);
 
         return List.of(flotaOvnis).toString();
+    }
+
+    boolean containsCard(String cardNumber) {
+        return this.flota.containsValue(cardNumber);
+    }
+
+    Collection<String> cardNumbers() {
+        return this.flota.values();
     }
 
 }
