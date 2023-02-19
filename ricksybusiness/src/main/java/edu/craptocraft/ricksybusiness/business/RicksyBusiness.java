@@ -72,61 +72,61 @@ public class RicksyBusiness {
                 // Mostramos el credito de la tarjeta de Abradolph
                 System.out.println("Credito de Abradolph: " + abradolph.credit());
 
-                // // La dualidad en Abradolph quiere reservar otro ovni.
-                // // El sistema detecta que ya tiene uno
-                // // e ignora la petición.
+                // La dualidad en Abradolph quiere reservar otro ovni.
+                // El sistema detecta que ya tiene uno
+                // e ignora la petición.
 
-                // System.out.println("\nAbradolph quiere otro ovni\n" +
-                // "==========================");
-                // ufosPark.dispatch(abradolph);
-                // System.out.println("Su credito no ha cambiado: " + abradolph.credit());
-                // System.out.println("Ovni de Abradolph: " +
-                // ufosPark.getUfoOf(abradolph.number()));
+                System.out.println("\nAbradolph quiere otro ovni\n" +
+                                "==========================");
+                ufosPark.dispatch(abradolph);
+                System.out.println("Su credito no ha cambiado: " + abradolph.credit());
+                System.out.println("Ovni de Abradolph: " +
+                                ufosPark.getUfoOf(abradolph.number()));
 
-                // // A GearHead le vacía la tarjeta el alien "Cámara Lenta"
-                // // mientras le daba la chapa, justo antes de pagar el ovni.
-                // // Intenta reservarlo y el componente de reserva de ovnis
-                // // no le asigna ninguno.
+                // A GearHead le vacía la tarjeta el alien "Cámara Lenta"
+                // mientras le daba la chapa, justo antes de pagar el ovni.
+                // Intenta reservarlo y el componente de reserva de ovnis
+                // no le asigna ninguno.
 
-                // System.out.println("\nLLega GearHead!\n" +
-                // "===============");
-                // CreditCard gearHead = new CreditCard("Gearhead", "8888888888888888");
+                System.out.println("\nLLega GearHead!\n" +
+                                "===============");
+                CreditCard gearHead = new CreditCard("Gearhead", "8888888888888888");
 
-                // gearHead.pay(3000); // le vacían la cartera
+                gearHead.pay(3000); // le vacían la cartera
 
-                // ufosPark.dispatch(gearHead);
-                // System.out.println("Su credito es cero: " + gearHead.credit());
-                // System.out.println("No puede reservar ovni: " +
-                // ufosPark.getUfoOf(gearHead.number()));
+                ufosPark.dispatch(gearHead);
+                System.out.println("Su credito es cero: " + gearHead.credit());
+                System.out.println("No puede reservar ovni: " +
+                                ufosPark.getUfoOf(gearHead.number()));
 
-                // // Squanchy deja su ovni reservado
-                // // antes de irse a squanchear
+                // Squanchy deja su ovni reservado
+                // antes de irse a squanchear
 
-                // System.out.println("\nLLega Squanchy!\n" +
-                // "==============");
-                // CreditCard squanchy = new CreditCard("Squanchy", "4444444444444444");
-                // ufosPark.dispatch(squanchy);
-                // System.out.println("Su credito es: " + squanchy.credit());
-                // System.out.println("Su ovni es: " + ufosPark.getUfoOf(squanchy.number()));
+                System.out.println("\nLLega Squanchy!\n" +
+                                "==============");
+                CreditCard squanchy = new CreditCard("Squanchy", "4444444444444444");
+                ufosPark.dispatch(squanchy);
+                System.out.println("Su credito es: " + squanchy.credit());
+                System.out.println("Su ovni es: " + ufosPark.getUfoOf(squanchy.number()));
 
-                // // Morty quiere un ovni para huir de la fiesta
-                // // pero ya no queda ninguno disponible
+                // Morty quiere un ovni para huir de la fiesta
+                // pero ya no queda ninguno disponible
 
-                // System.out.println("\nAlgun ovni para Morty?\n" +
-                // "======================");
-                // CreditCard morty = new CreditCard("Morty", "0000000000000000");
-                // ufosPark.dispatch(morty);
-                // System.out.println("Su credito no ha cambiado: " + morty.credit());
-                // System.out.println("No hay ovni Morty: " +
-                // ufosPark.getUfoOf(morty.number()));
+                System.out.println("\nAlgun ovni para Morty?\n" +
+                                "======================");
+                CreditCard morty = new CreditCard("Morty", "0000000000000000");
+                ufosPark.dispatch(morty);
+                System.out.println("Su credito no ha cambiado: " + morty.credit());
+                System.out.println("No hay ovni Morty: " +
+                                ufosPark.getUfoOf(morty.number()));
 
-                // // Metemos un ovni más en la flota de ovnis
-                // // y mostramos la flota por consola
+                // Metemos un ovni más en la flota de ovnis
+                // y mostramos la flota por consola
 
-                // System.out.println("\nFlota de ovnis\n" +
-                // "==============");
-                // ufosPark.add("trex");
-                // System.out.println(ufosPark);
+                System.out.println("\nFlota de ovnis\n" +
+                                "==============");
+                ufosPark.add("trex");
+                System.out.println(ufosPark);
 
                 // /**
                 // * Construye el dispensador de packs de bienvenida.

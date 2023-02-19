@@ -1,6 +1,8 @@
 package edu.craptocraft.ricksybusiness.business;
 
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class UfosPark implements GuestDispatcher {
@@ -37,7 +39,7 @@ public class UfosPark implements GuestDispatcher {
     }
 
     String getUfoOf(String cardNumber) {
-        String id = null;
+        String id = "No se ha asignado ningún ovni";
 
         for (Map.Entry<String, String> ovnis : flota.entrySet()) {
             if (ovnis.getValue() == cardNumber) {
@@ -46,6 +48,15 @@ public class UfosPark implements GuestDispatcher {
             }
         }
         return id;
+    }
+
+    @Override
+    public String toString() {
+        String[] flotaOvnis = this.flota.keySet().toArray(new String[flota.size()]);
+
+        Arrays.sort(flotaOvnis);
+
+        return List.of(flotaOvnis).toString();
     }
 
 }
