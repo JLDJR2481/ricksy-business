@@ -206,44 +206,44 @@ public class RicksyBusiness {
                 receptivo.dispatch(morty);
                 mostrarReserva(morty, packExpender, ufosPark);
 
-                // /**
-                // * A por el 10!!
-                // * Wubba lubba dub dub!!
-                // *
-                // * Añade otra tarea al receptivo,
-                // * de modo que 5 invitados:
-                // * abradolph, squanchy, morty, gearHead, birdpearson
-                // * encarguen un RickMenú junto
-                // * al ovni y al pack de bienvenida.
-                // * Hay 100 RickMenús y su precio es de 10 EZIs.
-                // * Muestra el total de pedidos y la lista de
-                // * invitados/as (numero de tarjeta) que han hecho un pedido.
-                // */
+                /**
+                 * A por el 10!!
+                 * Wubba lubba dub dub!!
+                 *
+                 * Añade otra tarea al receptivo,
+                 * de modo que 5 invitados:
+                 * abradolph, squanchy, morty, gearHead, birdpearson
+                 * encarguen un RickMenú junto
+                 * al ovni y al pack de bienvenida.
+                 * Hay 100 RickMenús y su precio es de 10 EZIs.
+                 * Muestra el total de pedidos y la lista de
+                 * invitados/as (numero de tarjeta) que han hecho un pedido.
+                 */
 
-                // // tu código aquí
+                // tu código aquí
 
-                // // RickMenuDispatcher MenuDispatcher = new RickMenuDispatcher();
+                RickMenuDispatcher MenuDispatcher = new RickMenuDispatcher(100, 10.0);
 
-                // // receptivo.registra(MenuDispatcher);
+                receptivo.registra(MenuDispatcher);
 
-                // // CreditCard[] cards = { abradolph, squanchy, morty, gearHead, birdpearson
-                // };
+                CreditCard[] cards = { abradolph, squanchy, morty, gearHead, birdpearson
+                };
 
-                // // for (CreditCard card : cards) {
-                // // receptivo.dispatch(card);
-                // // }
+                for (CreditCard card : cards) {
+                        receptivo.dispatch(card);
+                }
 
-                // // System.out.println("\nPedidos de RickMenus:\n" +
-                // // "=====================");
-                // // System.out.println(MenuDispatcher);
+                System.out.println("\nPedidos de RickMenus:\n" +
+                                "=====================");
+                System.out.println(MenuDispatcher);
 
-                // // System.out.println("\nCreditos de los invitados/as:\n" +
-                // // "=============================");
+                System.out.println("\nCreditos de los invitados/as:\n" +
+                                "=============================");
 
-                // // for (CreditCard card : cards) {
-                // // System.out.println(card);
-                // // System.out.println();
-                // // }
+                for (CreditCard card : cards) {
+                        System.out.println(card);
+                        System.out.println();
+                }
         }
 
         private static void mostrarReserva(CreditCard card, CrystalExpender expender,
