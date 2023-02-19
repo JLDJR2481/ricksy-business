@@ -20,8 +20,21 @@ public class CreditCard {
         return this.owner;
     }
 
+    boolean pay(double cobro) {
+        if (cobro <= credit) {
+            this.credit -= cobro;
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    double credit() {
+        return this.credit;
+    }
+
     @Override
     public String toString() {
-        return "Owner: " + cardOwner() + "\nCard number: " + number();
+        return "Owner: " + cardOwner() + "\nCard number: " + number() + "\nCredit: " + credit() + " " + this.SYMBOL;
     }
 }
